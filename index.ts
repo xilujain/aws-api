@@ -1,13 +1,13 @@
 import express, { Application } from "express";
-import { dev } from "./config/index";
-import { errorHandler } from "./middlewares/errorHandler";
-import productRoute from "./routes/productRoute";
-import { connectDB } from "./config/db";
+import { dev } from "./src/config/index";
+import { errorHandler } from "./src/middlewares/errorHandler";
+import productRoute from "./src/routes/productRoute";
+import { connectDB } from "./src/config/db";
 import createHttpError from "http-errors";
 import morgan from "morgan";
 
 const app: Application = express();
-const port =  dev.app.port || 8080;
+const port = dev.app.port || 8080;
 
 app.use(morgan("dev"));
 app.use(express.json());
