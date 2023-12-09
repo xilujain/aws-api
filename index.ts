@@ -1,8 +1,8 @@
 import express, { Application } from "express";
-import { dev } from "./src/config/index";
-import { errorHandler } from "./src/middlewares/errorHandler";
-import productRoute from "./src/routes/productRoute";
-import { connectDB } from "./src/config/db";
+import { dev } from "./config/index";
+import { errorHandler } from "./middlewares/errorHandler";
+import productRoute from "./routes/productRoute";
+import { connectDB } from "./config/db";
 import createHttpError from "http-errors";
 import morgan from "morgan";
 
@@ -12,8 +12,6 @@ const port = dev.app.port || 8080;
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-
 
 app.listen(port, () => {
     console.log(`server is running at http://127.0.0.1:${port}`);

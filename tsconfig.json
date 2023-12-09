@@ -10,7 +10,7 @@
     "include": [
         "src/**/*.ts",
         "index.ts"
-    ],
+, "types.ts"    ],
     "exclude": [
         "node_modules"
     ]

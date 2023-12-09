@@ -1,4 +1,4 @@
-import '../config';
+import '.';
 
 export const dev = {
     app: {
