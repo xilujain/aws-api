@@ -1,8 +1,8 @@
 import express, { Application } from "express";
-import { dev } from "./config/index";
-import { errorHandler } from "./middlewares/errorHandler";
-import productRoute from "./routes/productRoute";
-import { connectDB } from "./config/db";
+import { dev } from "../config/index";
+import { errorHandler } from "../middlewares/errorHandler";
+import productRoute from "../routes/productRoute";
+import { connectDB } from "../config/db";
 import createHttpError from "http-errors";
 import morgan from "morgan";
 
